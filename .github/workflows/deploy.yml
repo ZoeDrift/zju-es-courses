@@ -1,0 +1,47 @@
+name: Deploy Multi-MkDocs Site
+
+on:
+  push:
+    branches:
+      - main # 当有代码推送到 main 分支时自动触发
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          # 在这里安装你配置里用到的所有插件
+          pip install mkdocs-material mkdocs-glightbox mkdocs-git-revision-date-localized-plugin jieba
+
+      - name: Build all sites and assemble
+        run: |
+          # 1. 创建一个名为 staging 的临时拼装车间
+          mkdir staging
+          
+          # 2. 把根目录的公共文件拷贝进去
+          cp index.html staging/
+          cp robots.txt staging/
+          cp -r public staging/
+          
+          # 3. 分别进入三个目录，把生成的网页直接输出到 staging 对应的文件夹里
+          cd gis && mkdocs build -d ../staging/gis && cd ..
+          cd geology && mkdocs build -d ../staging/geology && cd ..
+          cd atmosphere && mkdocs build -d ../staging/atmosphere && cd ..
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./staging # 将拼装好的成品推送到 gh-pages 分支

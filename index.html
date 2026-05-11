@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地球科学学院 | 课程资源站</title>
+    <style>
+        /* 基础变量设置 */
+        :root {
+            --bg-color: #f7f6f2;        /* 主背景：灰黄 */
+            --primary-color: #3b5998;   /* 主色调：低饱和深蓝 */
+            --primary-hover: #2a406d;   /* 悬停加深 */
+            --text-main: #333333;
+            --text-muted: #556b7d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* 主体内容包裹层：强制垂直+水平居中 */
+        .main-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* 顶部 Landsat 卫星图与标题区 */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        /* Landsat ZJUES 图片样式 */
+        .landsat-img {
+            max-width: 100%;
+            width: 320px; /* 控制图片的合适显示宽度，可根据实际效果微调 */
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .landsat-img:hover {
+            transform: scale(1.02);
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* 警告提示框 */
+        .warning-box {
+            background-color: #fff3cd;
+            color: #856404;
+            border-left: 4px solid #ffeeba;
+            padding: 14px 20px;
+            border-radius: 6px;
+            margin-bottom: 45px;
+            max-width: 650px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* 专业导航网格 */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 960px;
+        }
+
+        /* 专业大按钮卡片 */
+        .nav-card {
+            background-color: #ffffff;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 35px 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 20px rgba(59, 89, 152, 0.1);
+        }
+
+        /* SVG 图标样式 */
+        .nav-icon {
+            width: 54px;
+            height: 54px;
+            color: var(--primary-color);
+            margin-bottom: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-card:hover .nav-icon {
+            color: var(--primary-hover);
+        }
+
+        .nav-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            background-color: #e4ebf0; /* 与你子站的页脚背景色呼应 */
+        }
+
+        /* 简单的渐入动画 */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        
+        <div class="header">
+            <img src="public/zjues.png" alt="ZJUES Landsat" class="landsat-img">
+            <h1>地球科学学院</h1>
+            <p>资源导航站</p>
+        </div>
+
+        <div class="warning-box">
+            <strong>访问提示：</strong> 本站为资源导航站，核心资料均指向校内论坛。详细内容需在 <b>ZJU 校园网环境</b> 或连接 <b>VPN</b> 后方可正常访问。
+        </div>
+
+        <div class="nav-grid">
+            <a href="gis/" class="nav-card">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="1 6 12 2 23 6 12 10 1 6"></polygon>
+                    <polyline points="1 11 12 15 23 11"></polyline>
+                    <polyline points="1 16 12 20 23 16"></polyline>
+                </svg>
+                <div class="nav-title">地理信息科学</div>
+            </a>
+            
+            <a href="geology/" class="nav-card">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8 3l4 8 5-5 5 15H2L8 3z"></path>
+                </svg>
+                <div class="nav-title">地质学</div>
+            </a>
+
+            <a href="atmosphere/" class="nav-card">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                </svg>
+                <div class="nav-title">大气科学</div>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Copyright &copy; 2026 cc98-地球科学学院，保留一切权利。
+    </div>
+
+</body>
+</html>

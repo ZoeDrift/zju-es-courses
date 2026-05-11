@@ -4,5 +4,6 @@ hide:
   - toc
 ---
 
-# 🗺️ 地理信息科学资源库
-（下面接着写你的正文...）
+# 地理信息科学-资源汇总
+
+[回到学院资源站首页](https://zoedrift.github.io/zju-es-courses/)

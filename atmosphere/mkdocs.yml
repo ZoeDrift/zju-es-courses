@@ -3,7 +3,9 @@ site_description: 浙江大学地科学院 大气科学 专业课程指南
 site_author: 好想喝抹茶
 
 nav:
-  -  大气主页: index.md
+  -  大气主页: 
+      - 首页: index.md
+      - 更新记录: update.md
   -  专业基础课程:
       - 常微分方程: basic/ode.md
       - 地球科学导论: basic/introduction_to_earth_science.md

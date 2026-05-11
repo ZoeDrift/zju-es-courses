@@ -1,0 +1,49 @@
+/* =========================================
+   1. 浅色模式 (Light Mode) 专属颜色配置
+   ========================================= */
+[data-md-color-scheme="default"] {
+  /* 导航栏：低饱和度、较深的蓝色 */
+  --md-primary-fg-color: #3b5998; 
+  /* 强调色/按钮/链接悬停颜色（与导航栏一致） */
+  --md-accent-fg-color: #3b5998; 
+
+  /* 主界面的底色：非常淡的灰黄色 */
+  --md-default-bg-color: #f7f6f2; 
+  /* 侧边栏和卡片的底色（保持纯白，这样就不会有奇怪的阴影割裂感） */
+  --md-default-bg-color--light: #ffffff; 
+
+  /* 页脚和底部底色（低饱和度、较浅的蓝色） */
+  --md-footer-bg-color: #e4ebf0;
+  --md-footer-bg-color--dark: #d6e0e6; /* 版权声明那一栏深一点点 */
+  --md-footer-fg-color: #556b7d;          /* 主文字 */
+  --md-footer-fg-color--light: #556b7d;   /* 版权等次要文字 */
+  --md-footer-fg-color--lighter: #556b7d; /* 图标或细微的链接文字 */
+}
+
+/* =========================================
+   2. 深色模式 (Dark Mode) 专属颜色配置
+   ========================================= */
+[data-md-color-scheme="slate"] {
+  /* 导航栏：深色模式下的深蓝色（比浅色模式更暗，保护眼睛） */
+  --md-primary-fg-color: #1f2d40; 
+  /* 强调色/链接颜色（深色模式下稍微亮一点的蓝色，保证可见度） */
+  --md-accent-fg-color: #6a92d4; 
+
+  /* 注意：这里我们坚决不改底色，保留原生的高级纯黑/深灰底色 */
+}
+
+
+.md-typeset h1 {
+  font-weight: 700 !important; /* 700 是标准的加粗，如果你的字体支持，写 800 或 900 会更粗 */
+  color: #3b5998;
+}
+.md-typeset h2 {
+  font-weight: 700 !important;
+  /* border-bottom: 1px solid #e4ebf0; 可选：给二级标题加一条浅色的下划线分割，层次更分明 */
+  /* padding-bottom: 5px; 配合下划线使用 */
+}
+
+/* 顺手把三级标题也稍微加粗一点点，保持梯队感 */
+.md-typeset h3 {
+  font-weight: 600 !important; 
+}

@@ -1,0 +1,149 @@
+site_name: 地质学 | 课程资源
+site_description: 浙江大学地科学院 地质学 专业课程指南
+site_author: 好想喝抹茶
+
+nav:
+  -  地质主页: index.md
+  -  专业基础课程:
+      - 地球科学导论: basic/introduction_to_earth_science.md
+      - 常微分方程: basic/ode.md
+      - 概率论与数理统计: basic/probability_and_mathematical_statistics.md
+      - 物理化学: basic/physical_chemistry.md
+  -  专业必修课程:
+      - 地球物质基础: required/basic_material_of_the_earth.md
+      - 构造地质学: required/structural_geology.md
+      - 地学数字信号处理基础: required/digital_signal_processing_for_geoscience.md
+      - 固体地球物理原理: required/principles_of_geophysics.md
+      - 地球科学人工智能方法: required/ai_in_es.md
+  -  专业选修课程:
+      - 地理信息科学导论: elective/gis_intro.md
+      - 岩石物理学: elective/petrogeophysics.md
+      - 大气物理和化学: elective/atmospheric_physics_and_chemistry.md
+      - 地貌学与第四纪地质: elective/geomorphology_and_quaternary_geology.md
+      - 全球气候与环境演变: elective/global_climatic_and_environmental_change.md
+      - 计算机地质仿真: elective/computer_simulation_in_geology.md
+      - 地震学: elective/seismology.md
+      - 沉积学与古地理学: elective/sedimentology_and_paleogeography.md
+      - 国土空间规划: elective/territory_spatial_planning.md
+      - 地质年代学: elective/geochronology.md
+      - 有机地球化学: elective/organic_geochemistry.md
+      - 遥感地学分析: elective/geographic_analysis_of_rs.md
+      - 实验地球物理: elective/experimental_geophysics.md
+      - 地球物理数据处理: elective/geophysical_data_processing.md
+      - 石油地质学: elective/petroleum_geology.md
+      - 岩石地球化学: elective/chemistry_of_rocks.md
+      - 高温高压岩石学: elective/hhpetrology.md
+      - 地球物理与大数据: elective/geophysics_and_big_data.md
+  -  实践教学环节:
+      - 地质认知实习: practice/field_trip_for_physical_geology.md
+      - 地质填图实习: practice/geological_mapping_field_trip.md
+      - 地学综合实习: practice/comprehensive_practice_in_geoscience.md
+  -  本专业进阶模块: 
+      - 地学数理统计分析: advanced/geological_data_statistic_analysis.md
+      - 古生物学与地史学: advanced/paleontology_and_historical_geology.md
+      - 环境地球化学: advanced/environmental_geochemistry.md
+      - 现代分析技术: advanced/modern_analytical_technologies.md
+      - 矿物岩石学: advanced/principles_of_mineralogy_and_petrology.md
+      - 地球化学: advanced/geochemistry.md
+      - 浅地表地球物理方法: advanced/nearsurface_geophysics.md
+      - 板块构造: advanced/plate_tectonics.md
+
+
+
+theme:
+  name: material
+  # logo: logo.ico  # 本地有这个文件后再取消注释
+  # favicon: logo.ico
+  font:
+    text: Roboto  # 或者使用 Inter, Lato 等非衬线字体
+    code: Roboto Mono
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    # - navigation.footer
+    - navigation.tabs # 开启顶部横向导航栏（非常关键）
+    - content.code.annotate
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+  language: 'zh'
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - meta
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_css:
+  - 'from_oi_wiki/css/extra.css?v=13' # 本地有文件后再取消注释
+  - css/extra.css
+  # - css/neoteroi-mkdocs.css
+
+extra_javascript:
+  - 'from_oi_wiki/js/extra.js' # 本地有文件后再取消注释
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+
+plugins:
+  - search:
+      jieba_dict: dict.txt.big # 本地有该字典文件后再取消注释
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
+  #     type: timeago
+  # - statistics     # 需要单独安装 mkdocs-statistics-plugin
+  # - termynal       # 需要单独安装 mkdocs-termynal
+  # - glightbox      # 需要单独安装 mkdocs-glightbox
+  # - rss            # 需要单独安装 mkdocs-rss-plugin
+
+copyright: 'Copyright &copy; 2026 cc98-地球科学学院，保留一切权利。'

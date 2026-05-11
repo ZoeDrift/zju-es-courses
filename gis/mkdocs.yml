@@ -1,0 +1,146 @@
+site_name: 地理信息科学 | 课程资源
+site_description: 浙江大学地科学院 GIS 专业课程指南
+site_author: 好想喝抹茶
+
+# ！！！核心：导航栏配置 ！！！
+# 配合 features 中的 navigation.tabs，这里的第一层级会变成顶部横向导航栏
+nav:
+  -  地信主页: index.md
+  -  专业基础课程:
+      - 面向对象程序设计: basic/oop.md
+      - 概率论与数理统计: basic/probability_and_mathematical_statistics.md
+      - 数据结构基础: basic/fds.md
+  -  专业必修课程:
+      - 自然地理学: required/physical_geo.md
+      - 地理信息科学导论: required/gis_intro.md
+      - 人文地理学: required/human_geo.md
+      - 地图学: required/map.md
+      - 遥感概论: required/rs.md
+      - GIS应用开发: required/gis_intro.md
+      - 遥感数字图像处理: required/rs_digital_image_processing.md
+      - 地理空间数据库: required/geodatabase.md
+      - 地球科学人工智能方法: required/ai_in_es.md
+  -  专业选修课程:
+      - Python程序设计: elective/python.md
+      - 地球科学导论: elective/introduction_to_earth_science.md
+      - Java应用技术: elective/java.md
+      - 现代气候学基础: elective/fundamentals_of_modern_climatology.md
+      - 数据库系统原理: elective/database.md
+      - 自然资源管理: elective/natural_resources_management.md
+      - 数据挖掘与机器学习: elective/data_mining_and_machine_learning.md
+      - 历史地理学概论: elective/historical_geography.md
+      - 计算机图形学: elective/computergraphics.md
+  -  实践教学环节:
+      - 地理认知实习: practice/geographical_field_training.md
+      - GIS实践: practice/gisprac.md
+      - 3S集成综合应用: practice/3s.md
+  -  本专业进阶模块: 
+      - GIS平台实践: advanced/gispp.md
+      - 城市地理学: advanced/urban.md
+      - 现代测量学: advanced/contemporarysurveying.md
+      - 环境地球化学: advanced/environmental_geochemistry.md
+      - 全球气候与环境演变: advanced/global_climatic_and_environmental_change.md
+      - 国土空间规划: advanced/territory_spatial_planning.md
+      - 遥感地学分析: advanced/geographic_analysis_of_rs.md
+      - 旅游规划与大数据: advanced/tourism_planning_and_big_data.md
+      - 地理信息科学前沿: advanced/frontier_research_in_gis.md
+
+
+
+theme:
+  name: material
+  # logo: logo.ico  # 本地有这个文件后再取消注释
+  # favicon: logo.ico
+  font:
+    text: Roboto  # 或者使用 Inter, Lato 等非衬线字体
+    code: Roboto Mono
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    # - navigation.footer
+    - navigation.tabs # 开启顶部横向导航栏（非常关键）
+    - content.code.annotate
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+  language: 'zh'
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - meta
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_css:
+  - 'from_oi_wiki/css/extra.css?v=13' # 本地有文件后再取消注释
+  - css/extra.css
+  # - css/neoteroi-mkdocs.css
+
+extra_javascript:
+  - 'from_oi_wiki/js/extra.js' # 本地有文件后再取消注释
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+
+plugins:
+  - search:
+      jieba_dict: dict.txt.big # 本地有该字典文件后再取消注释
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
+  #     type: timeago
+  # - statistics     # 需要单独安装 mkdocs-statistics-plugin
+  # - termynal       # 需要单独安装 mkdocs-termynal
+  # - glightbox      # 需要单独安装 mkdocs-glightbox
+  # - rss            # 需要单独安装 mkdocs-rss-plugin
+
+copyright: 'Copyright &copy; 2026 cc98-地球科学学院，保留一切权利。'

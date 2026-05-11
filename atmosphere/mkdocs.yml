@@ -36,7 +36,9 @@ nav:
       - 数值天气预报: advanced/numerical_weather_prediction.md
       - 地球科学人工智能方法: advanced/ai_in_es.md
       - 数据挖掘与机器学习: advanced/data_mining_and_machine_learning.md
-
+  - 课程经验帖: experience/1.md
+  - 升学&就业: further/1.md
+  - 其他资源: other/1.md
 
 
 theme:

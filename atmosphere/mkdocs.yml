@@ -114,7 +114,6 @@ markdown_extensions:
   - pymdownx.tilde
 
 extra_css:
-  - 'from_oi_wiki/css/extra.css?v=13' # 本地有文件后再取消注释
   - css/extra.css
   # - css/neoteroi-mkdocs.css
 
@@ -127,9 +126,9 @@ extra_javascript:
 plugins:
   - search:
       jieba_dict: dict.txt.big # 本地有该字典文件后再取消注释
-  # - git-revision-date-localized:
-  #     enable_creation_date: true
-  #     type: timeago
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
   # - statistics     # 需要单独安装 mkdocs-statistics-plugin
   # - termynal       # 需要单独安装 mkdocs-termynal
   # - glightbox      # 需要单独安装 mkdocs-glightbox

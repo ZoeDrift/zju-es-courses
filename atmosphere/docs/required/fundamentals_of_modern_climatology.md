@@ -1,6 +1,6 @@
 # 现代气候学基础
 ## 笔记
-[现代气候学基础笔记（25-26秋冬）](https://www.cc98.org/topic/6410324) [@弹指间 ](https://www.cc98.org/user/id/808359) (下次能发在地科版吗🥺)  
+[现代气候学基础笔记（25-26秋冬）](https://www.cc98.org/topic/6410324) [@弹指间 ](https://www.cc98.org/user/id/808359) 
 
 ## 回忆卷
 [2025-2026秋冬 现代气候学基础 回忆卷](https://www.cc98.org/topic/6394679) [@howitworks ](https://www.cc98.org/user/id/760662)  

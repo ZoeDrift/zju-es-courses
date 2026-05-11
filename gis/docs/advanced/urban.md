@@ -1,5 +1,10 @@
 # 城市地理学
+## 笔记
+[2025-2026春夏 城市地理学 回忆卷 笔记](https://www.cc98.org/topic/6486369)[@烷基八氮 ](https://www.cc98.org/user/id/767795)
+
 ## 回忆卷
+[2025-2026春夏 城市地理学 回忆卷 笔记](https://www.cc98.org/topic/6486369)[@烷基八氮 ](https://www.cc98.org/user/id/767795)
+
 [24-25春夏 城市地理学 回忆卷](https://www.cc98.org/topic/6221889) [@AkiRikka ](https://www.cc98.org/user/id/704665)  
 
 [2023-2024春夏 城市地理学 回忆卷](https://www.cc98.org/topic/5925445) [@蚊子不叮 ](https://www.cc98.org/user/id/746648)  

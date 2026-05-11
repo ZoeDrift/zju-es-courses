@@ -3,7 +3,9 @@ site_description: 浙江大学地科学院 地质学 专业课程指南
 site_author: 好想喝抹茶
 
 nav:
-  -  地质主页: index.md
+  -  地质主页: 
+      - 首页: index.md
+      - 更新记录: update.md
   -  专业基础课程:
       - 地球科学导论: basic/introduction_to_earth_science.md
       - 常微分方程: basic/ode.md
@@ -125,7 +127,6 @@ markdown_extensions:
   - pymdownx.tilde
 
 extra_css:
-  - 'from_oi_wiki/css/extra.css?v=13' # 本地有文件后再取消注释
   - css/extra.css
   # - css/neoteroi-mkdocs.css
 
@@ -138,9 +139,9 @@ extra_javascript:
 plugins:
   - search:
       jieba_dict: dict.txt.big # 本地有该字典文件后再取消注释
-  # - git-revision-date-localized:
-  #     enable_creation_date: true
-  #     type: timeago
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
   # - statistics     # 需要单独安装 mkdocs-statistics-plugin
   # - termynal       # 需要单独安装 mkdocs-termynal
   # - glightbox      # 需要单独安装 mkdocs-glightbox

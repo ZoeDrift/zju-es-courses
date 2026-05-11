@@ -21,6 +21,7 @@
 | :--- | :---: | :---: |
 | [地球物质基础](required/basic_material_of_the_earth.md) | ✔️ | ✔️ |
 | [构造地质学](required/structural_geology.md) | ✔️ | ✖️ |
+| [地球物理学概论](required/introduction_to_geophysics.md) | ✔️ | ✖️ |
 | [地学数字信号处理基础](required/digital_signal_processing_for_geoscience.md) | ✔️ | ✖️ |
 | [固体地球物理原理](required/principles_of_geophysics.md) | ✔️ | ✖️ |
 | [地球科学人工智能方法](required/ai_in_es.md) | ✖️ | ✖️ |

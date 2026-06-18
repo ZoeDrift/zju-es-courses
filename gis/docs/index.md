@@ -23,7 +23,8 @@
 | [人文地理学](required/human_geo.md) | ✔️ | ✔️ |
 | [地图学](required/map.md) | ✔️ | ✔️ |
 | [遥感概论](required/rs.md) | ✔️ | ✔️ |
-| [GIS应用开发](required/gis_intro.md) | ✔️ | ✔️ |
+| [GIS应用开发](required/gisad.md) | ✔️ | ✔️ |
+| [GIS空间分析](required/gissa.md) | ✔️ | ✔️ |
 | [遥感数字图像处理](required/rs_digital_image_processing.md) | ✔️ | ✖️ |
 | [地理空间数据库](required/geodatabase.md) | ✔️ | ✖️ |
 | [地球科学人工智能方法](required/ai_in_es.md) | ✖️ | ✖️ |
